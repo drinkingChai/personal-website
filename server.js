@@ -3,8 +3,9 @@ const path = require('path')
 
 const app = express()
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
-app.use('/css', express.static(path.join(__dirname, 'public', 'css')))
+app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/data', express.static(path.join(__dirname, 'data')))
+app.use('/icons', express.static(path.join(__dirname, 'node_modules', 'ionicons/dist/css')))
 
 
 app.get('/*', (req, res, next) => {

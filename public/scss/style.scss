@@ -1,0 +1,34 @@
+@import '_reset.scss';
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+@import '_colors.scss';
+@import '_shadows.scss';
+@import '_buttons.scss';
+
+// globals
+a { text-decoration: none; color: inherit; }
+main {
+  min-height: calc(100vh - 110px);
+}
+h3 {
+  font-size: 1.3em;
+  line-height: 1.7em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: .9em;
+}
+
+// pages
+@import '_nav.scss';
+@import '_footer.scss';
+@import './pages/_home.scss';
+@import './pages/projects.scss';

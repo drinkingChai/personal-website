@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 2px; }
+
+.btn-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+main {
+  min-height: calc(100vh - 110px); }
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.7em; }
+
+h4 {
+  font-size: 1.2em; }
+
+h5 {
+  font-size: .9em; }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px; }
+  nav a {
+    padding: 15px 10px;
+    color: inherit; }
+    nav a.active {
+      border-bottom: solid 2px black; }
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 16px 0 0 0;
+  margin: 10px 0 20px 0;
+  text-align: center; }
+
+.me {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 50vh;
+  text-align: center;
+  padding: 20px 0 30px 0;
+  position: relative; }
+  .me > * {
+    align-self: center; }
+  .me img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .me:after {
+    content: '';
+    height: 2px;
+    background-color: black;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 20%; }
+
+.home-projects-container {
+  padding-top: 30px;
+  max-width: 800px;
+  margin: 0 auto; }
+
+.projects-container {
+  display: grid;
+  grid-gap: 20px; }
+  .projects-container .project-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 3px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.025);
+    display: grid;
+    grid-gap: 10px; }
+    .projects-container .project-card .project-details-container {
+      display: grid;
+      grid-gap: 5px; }
+      .projects-container .project-card .project-details-container p {
+        padding: 10px 0; }
+    .projects-container .project-card .tech-used-container {
+      display: flex;
+      font-size: .9em; }
+      .projects-container .project-card .tech-used-container > * {
+        margin-right: 5px;
+        align-self: center; }
+      .projects-container .project-card .tech-used-container > *:not(:first-child) {
+        border-bottom: solid 2px black;
+        padding: 3px; }
+      .projects-container .project-card .tech-used-container.hidden {
+        display: none; }
+    .projects-container .project-card .links-container {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between; }
+      .projects-container .project-card .links-container > * {
+        align-self: center; }
+      .projects-container .project-card .links-container i {
+        font-size: 1.2em; }
+      .projects-container .project-card .links-container .social-links {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 15px; }

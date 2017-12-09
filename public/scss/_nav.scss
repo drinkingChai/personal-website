@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  & a {
+    padding: 15px 10px;
+    color: inherit;
+    &.active {
+      border-bottom: solid 2px black;
+    }
+  }
+}

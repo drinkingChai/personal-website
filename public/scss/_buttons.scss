@@ -1,0 +1,13 @@
+.btn {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 2px;
+  // box-shadow: $shadow1;
+}
+
+.btn-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
