@@ -4,6 +4,7 @@ const path = require('path')
 const app = express()
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
 app.use('/css', express.static(path.join(__dirname, 'public', 'css')))
+app.use('/data', express.static(path.join(__dirname, 'data')))
 
 
 app.get('/*', (req, res, next) => {
