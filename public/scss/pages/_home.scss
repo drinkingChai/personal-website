@@ -1,11 +1,11 @@
 .me-container {
   position: relative;
   &:before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('/public/assets/bg3.jpg') 0 / cover fixed;
-    filter: blur(5px);
+    // content: '';
+    // position: absolute;
+    // top: 0; left: 0; right: 0; bottom: 0;
+    // background: url('/public/assets/bg3.jpg') 0 / cover fixed;
+    // filter: blur(5px);
   }
 }
 .me {
@@ -23,7 +23,7 @@
   & h3, & h4 {
     // font-family: 'Zilla Slab Highlight', cursive;
     // color: black;
-    color: $whitesmoke;
+    // color: $whitesmoke;
   }
   & > * {
     align-self: center;
