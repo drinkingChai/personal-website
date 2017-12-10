@@ -18,16 +18,16 @@ const Home = ({ me, projects }) => {
           </div>
 
           <div className='btn-container'>
-            <Link to='/projects' className='btn default'>Projects</Link>
-            <a href={ me.social && me.social.resume } target='_blank' className='btn default'>Resume</a>
-            <Link to='/contact' className='btn default'>Contact</Link>
+            <Link to='/projects' className='btn inverse'>Projects</Link>
+            <a href={ me.social && me.social.resume } target='_blank' className='btn inverse'>Resume</a>
+            <Link to='/contact' className='btn inverse'>Contact</Link>
           </div>
         </div>
       </div>
 
       <div className='home-projects-container'>
         <Projects projects={ projects.splice(0, 2) } />
-        <Link to='/projects' className='btn default see-more'>See more!</Link>
+        <Link to='/projects' className='btn inverse see-more'>See more!</Link>
       </div>
     </div>
   )

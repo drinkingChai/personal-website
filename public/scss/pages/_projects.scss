@@ -3,9 +3,9 @@
   // grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   & .project-card {
-    // background-color: $whitesmoke;
-    background-color: $charlestongreen;
-    color: $whitesmoke;
+    background-color: $whitesmoke;
+    // background-color: $charlestongreen;
+    // color: $whitesmoke;
     box-shadow: $shadow1;
     border-radius: 3px;
     padding: 30px;
@@ -73,7 +73,7 @@
 .my-projects {
   max-width: 830px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 30px 15px;
   & .page-title {
     border-bottom: solid 1px $charlestongreen;
     margin-bottom: 30px;
