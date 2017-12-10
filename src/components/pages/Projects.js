@@ -19,7 +19,7 @@ export const Projects = ({ projects }) => {
           </div>
 
           <div className='links-container'>
-            { project.url && <a href={ project.url } target='_blank' className='project-url'>{ project.url }</a> }
+            { project.url && <a href={ project.url } target='_blank' className='project-url'>{ project.url }</a> || <span></span> }
             <div className='social-links'>
             {
               project.links.map((link, i) =>
