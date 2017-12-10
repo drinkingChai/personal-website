@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack -w & node-sass -w public/scss -o public/css & nodemon server.js --ignore public/ --ignore dist/ --ignore src/",
-    "start": "node-sass public/scss -o public/css & webpack & node server.js"
+    "start": "node-sass public/scss -o public/css & webpack & node server.js",
+    "pull": "node-sass public/scss -o public/css & webpack"
   },
   "keywords": [],
   "author": "",
