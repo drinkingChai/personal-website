@@ -11,10 +11,9 @@ const Home = ({ me, projects }) => {
     <div className='home'>
       <div className='me-container'>
         <div className='me'>
-          <div className='headline-container'>
-            <h1>Wasif Zaman</h1>
-            <h3>Full Stack Developer</h3>
-          </div>
+          <div className='batman'></div>
+          <h1>Wasif Zaman</h1>
+          <h2>Full Stack Developer</h2>
         </div>
       </div>
 

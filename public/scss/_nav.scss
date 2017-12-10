@@ -5,7 +5,7 @@ nav {
   top: 0;
   padding-right: 10px;
   width: 100%;
-  background-color: #3D348B;
+  background-color: #1B2432;
   color: $whitesmoke;
   z-index: 99;
   & a {
@@ -14,5 +14,9 @@ nav {
     &.active {
       border-bottom: solid 2px $whitesmoke;
     }
+  }
+  & .batman {
+    height: 48px;
+    width: 48px;
   }
 }

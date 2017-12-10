@@ -1,11 +1,9 @@
 @import '_reset.scss';
 
 // fonts
-@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC|Quicksand');
 * {
   box-sizing: border-box;
-  // font-family: 'Roboto', sans-serif;
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
 }
@@ -21,12 +19,9 @@ a { text-decoration: none; color: inherit; }
 main {
   margin: 48px auto 0 auto;
   min-height: calc(100vh - 112px);
-  // max-width: 830px;
-  // padding: 20px 15px 0 15px;
 }
-h1 {
-  font-size: 3em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
 h3 {
   font-size: 1.25em;
   line-height: 1.5em;
@@ -35,9 +30,7 @@ h4 {
   font-size: 1.2em;
   line-height: 1.3em;
 }
-h5 {
-  font-size: .9em;
-}
+h5 { font-size: .9em; }
 
 @import '_colors.scss';
 @import '_shadows.scss';
@@ -51,3 +44,5 @@ h5 {
 @import './pages/_home.scss';
 @import './pages/_projects.scss';
 @import './pages/_contact.scss';
+
+@import '_batman.scss';

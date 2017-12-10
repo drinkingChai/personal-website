@@ -1,11 +1,8 @@
 .projects-container {
   display: grid;  
-  // grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   & .project-card {
     background-color: $whitesmoke;
-    // background-color: $charlestongreen;
-    // color: $whitesmoke;
     box-shadow: $shadow1;
     border-radius: 3px;
     padding: 30px;
