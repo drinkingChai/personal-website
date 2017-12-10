@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import { Projects } from './Projects'
 
 const Home = ({ me, projects }) => {
+  window.scrollTo(0, 0)
+  
   return (
     <div className='home'>
       <div className='me-container'>
@@ -24,7 +26,8 @@ const Home = ({ me, projects }) => {
       </div>
 
       <div className='home-projects-container'>
-        <Projects projects={ projects.splice(0, 5) } />
+        <Projects projects={ projects.splice(0, 2) } />
+        <Link to='/projects' className='btn default see-more'>See more!</Link>
       </div>
     </div>
   )

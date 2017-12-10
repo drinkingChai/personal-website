@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import IconLink from '../iconLinkGenerator'
 
 export const Projects = ({ projects }) => {
+  window.scrollTo(0, 0)
+  
   return (
     <div className='projects-container'>
     {
@@ -17,7 +19,7 @@ export const Projects = ({ projects }) => {
           </div>
 
           <div className='links-container'>
-            { project.url && <p><a href={ project.url } target='_blank'>{ project.url }</a></p> }
+            { project.url && <a href={ project.url } target='_blank' className='project-url'>{ project.url }</a> }
             <div className='social-links'>
             {
               project.links.map((link, i) =>
@@ -41,8 +43,8 @@ export const Projects = ({ projects }) => {
 
 export const MyProjects = ({ projects }) => {
   return (
-    <div>
-      <h3>Projects</h3>
+    <div className='my-projects'>
+      <h3 className='page-title'>Projects</h3>
 
       <Projects projects={ projects } />
     </div>

@@ -1,7 +1,12 @@
 nav {
   display: flex;
   justify-content: flex-end;
-  margin-right: 15px;
+  position: fixed;
+  top: 0;
+  padding-right: 10px;
+  width: 100%;
+  background-color: $whitesmoke;
+  z-index: 99;
   & a {
     padding: 15px 10px;
     color: inherit;

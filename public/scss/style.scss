@@ -11,17 +11,25 @@
 @import '_shadows.scss';
 @import '_buttons.scss';
 
+
+body {
+  background-color: #F4F4F6;
+}
 // globals
 a { text-decoration: none; color: inherit; }
 main {
+  margin: 48px auto 0 auto;
   min-height: calc(100vh - 110px);
+  max-width: 800px;
+  padding-top: 20px;
 }
 h3 {
-  font-size: 1.3em;
-  line-height: 1.7em;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 h4 {
   font-size: 1.2em;
+  line-height: 1.3em;
 }
 h5 {
   font-size: .9em;
@@ -31,4 +39,5 @@ h5 {
 @import '_nav.scss';
 @import '_footer.scss';
 @import './pages/_home.scss';
-@import './pages/projects.scss';
+@import './pages/_projects.scss';
+@import './pages/_contact.scss';

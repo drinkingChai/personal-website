@@ -24,7 +24,7 @@
         align-self: center;
       }
       & > *:not(:first-child) {
-        border-bottom: solid 2px black;
+        border-bottom: solid 2px $charlestongreen;
         padding: 3px;
       }
       &.hidden {
@@ -46,6 +46,32 @@
         grid-auto-flow: column;
         grid-gap: 15px;
       }
+      & .project-url {
+        position: relative;
+        &:after {
+          content: '';
+          height: 2px;
+          width: 0;
+          background-color: $charlestongreen;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          transition: width 200ms;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
     }
   }
+}
+
+.my-projects {
+  padding: 0 30px;
+  & .page-title {
+    border-bottom: solid 2px $charlestongreen;
+    margin-bottom: 30px;
+  } 
 }
