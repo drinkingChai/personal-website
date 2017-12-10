@@ -1,7 +1,7 @@
 input, textarea {
   font-size: 1em;
   outline: none;
-  border: solid 2px $charlestongreen;
+  border: solid 1px $charlestongreen;
   border-radius: 0;
   padding: 10px;
   width: 100%;
@@ -29,7 +29,7 @@ button {
     }
     &:after {
       content: '';
-      height: 2px;
+      height: 1px;
       position: absolute;
       width: 60%;
       left: 20%;

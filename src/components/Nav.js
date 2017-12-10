@@ -15,7 +15,7 @@ const Nav = ({ location, blog }) => {
     {
       links.map((link, i) => <Link to={ link.path } key={ i } className={ `${ pathname == link.path ? 'active' : '' }` }>{ link.label }</Link>)
     }
-      <a href={ blog }>Blog</a>
+      <a href={ blog } target='_blank'>Blog</a>
     </nav>
   )
 }

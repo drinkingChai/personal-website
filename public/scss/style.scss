@@ -2,9 +2,12 @@
 
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
 }
 
 body {
