@@ -1,7 +1,7 @@
 @import '_reset.scss';
 
 // fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 * {
   box-sizing: border-box;
@@ -21,8 +21,8 @@ a { text-decoration: none; color: inherit; }
 main {
   margin: 48px auto 0 auto;
   min-height: calc(100vh - 112px);
-  max-width: 830px;
-  padding: 20px 15px 0 15px;
+  // max-width: 830px;
+  // padding: 20px 15px 0 15px;
 }
 h3 {
   font-size: 1.25em;

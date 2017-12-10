@@ -16,6 +16,8 @@ button {
 .contact-container {
   display: grid;
   grid-gap: 35px;
+  max-width: 830px;
+  padding: 40px 15px 0 15px;
   & .social-container {
     text-align: center;
     position: relative;

@@ -1,17 +1,16 @@
 .me-container {
   position: relative;
   &:before {
-    // content: '';
-    // position: absolute;
-    // top: 0; left: 0; right: 0; bottom: 0;
-    // background: url('/public/assets/davies-designs-379021.jpg') 0 / cover fixed;
-    // filter: blur(50px);
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/public/assets/bg2.jpg') 0 / cover fixed;
+    filter: blur(15px);
   }
 }
 .me {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+  max-width: 830px;
+  margin: 0 auto;
   display: grid;
   grid-auto-flow: row;
   align-items: center;
@@ -19,8 +18,13 @@
   grid-gap: 10px;
   height: 70vh;
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 0 15px 30px 15px;
   position: relative;
+  & h3, & h4 {
+    // font-family: 'Zilla Slab Highlight', cursive;
+    // color: black;
+    color: $whitesmoke;
+  }
   & > * {
     align-self: center;
   }
@@ -41,6 +45,10 @@
   }
   & h3 {
     margin-bottom: .8em;
+    font-size: 1.5em;
+  }
+  & h4 {
+    font-size: 1.3em;
   }
 
   @media screen and (max-height: 850px) {
@@ -49,11 +57,13 @@
 }
 
 .home-projects-container {
-  padding-top: 50px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 70px 15px 30px 15px;
   display: flex;
   flex-direction: column;
+  & > * {
+    max-width: 830px;
+    margin: 0 auto;
+  }
   & .see-more {
     margin-top: 20px;
     text-align: center;
