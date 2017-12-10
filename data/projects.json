@@ -2,7 +2,7 @@
   {
     "name": "Iota",
     "role": "Sole Developer",
-    "location": "Stackathon hackathon",
+    "location": "Fullstack Academy - Stackathon hackathon",
     "description": "A web app for writing down quick thoughts that are automatically grouped based on timing and categorized via a machine learning API. Represents categories in graphs for self reflection.",
     "techUsed": [ "React", "Redux", "PostgreSQL", "NaturalNode", "D3", "MonkeyLearn API", "React Beautiful DnD", "SASS" ],
     "url": "http://iotaof.me",
@@ -12,9 +12,9 @@
     ]
   },
   {
-    "name": "Dita",
+    "name": "DITA",
     "role": "Project Lead/Developer",
-    "location": "Fullstack Academy Capstone Project",
+    "location": "Fullstack Academy - Capstone Project",
     "description": "Dreams, Ideas, Thoughts, Analytics (DITA). Location based story sharing with the goal of giving insights to people’s thoughts anywhere in the world. Users are able to read and provide feedback, causing stories to trend.",
     "techUsed": [ "React", "Redux", "PostgreSQL", "MapBox", "SASS" ],
     "url": "http://dita-capstone-wz.herokuapp.com",

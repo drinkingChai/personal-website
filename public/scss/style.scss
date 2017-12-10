@@ -7,19 +7,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
-@import '_colors.scss';
-@import '_shadows.scss';
-@import '_buttons.scss';
-
-
 body {
   background-color: #F4F4F6;
+  &.modal-active {
+    overflow: hidden;
+  }
 }
 // globals
 a { text-decoration: none; color: inherit; }
 main {
   margin: 48px auto 0 auto;
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 112px);
   max-width: 800px;
   padding-top: 20px;
 }
@@ -34,6 +32,12 @@ h4 {
 h5 {
   font-size: .9em;
 }
+
+@import '_colors.scss';
+@import '_shadows.scss';
+@import '_buttons.scss';
+@import '_modal.scss';
+@import '_animations.scss';
 
 // pages
 @import '_nav.scss';

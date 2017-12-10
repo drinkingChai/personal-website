@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { sendMail } from '../../actions'
+
+import Modal from '../Modal'
+import { SentSuccessMessage, SendingEmailMessage } from '../messages'
 
 class Contact extends Component {
   state = {
     email: '',
-    message: ''
+    message: '',
+    sendingStatus: false,
+    pseudoStatus: false,
+    modalActive: false
   }
 
   handleChange = name => ev => {
@@ -13,7 +20,28 @@ class Contact extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    console.log(this.state)
+    this.setState({ sendingStatus: true, pseudoStatus: true, modalActive: true })
+
+    setTimeout(() => {
+      if (!this.state.sendingStatus) {
+        this.setState({ pseudoStatus: false, email: '', message: '' })
+        setTimeout(() => {
+          this.setState({ modalActive: false })
+        }, 2100)
+      }
+      else this.setState({ pseudoStatus: false })
+    }, 3000)
+
+    this.props.sendMail(this.state)
+      .then(() => {
+        if (!this.state.pseudoStatus) {
+          this.setState({ sendingStatus: false, email: '', message: '' })
+          setTimeout(() => {
+            this.setState({ modalActive: false })
+          }, 2100)
+        }
+        else this.setState({ sendingStatus: false })
+      })
   }
 
   render = () => {
@@ -22,6 +50,13 @@ class Contact extends Component {
 
     return (
       <div className='contact-container'>
+        {
+          this.state.modalActive ?
+            this.state.pseudoStatus || this.state.sendingStatus ?
+            <Modal><SendingEmailMessage /></Modal> :
+            <Modal className='fading'><SentSuccessMessage /></Modal> :
+            null
+        }
         <div className='social-container'>
           <h3>You can reach me via: </h3>
           <div className='contact-links'>
@@ -32,9 +67,9 @@ class Contact extends Component {
 
         <form className='contact-form-container' onSubmit={ this.handleSubmit }>
           <h3>Or contact me below!</h3>
-          <input value={ this.email } onChange={ this.handleChange('email') } placeholder='Email' type='email' required/>
+          <input value={ this.state.email } onChange={ this.handleChange('email') } placeholder='Your email' type='email' required/>
 
-          <textarea value={ this.message } onChange={ this.handleChange('message') } rows={ 10 } placeholder='Message'></textarea>
+          <textarea value={ this.state.message } onChange={ this.handleChange('message') } rows={ 10 } placeholder='Message'></textarea>
 
           <div>
             <button className='btn default'>Contact</button>
@@ -46,4 +81,4 @@ class Contact extends Component {
 }
 
 const mapState = ({ me }) => ({ me })
-export default connect(mapState)(Contact)
+export default connect(mapState, { sendMail })(Contact)
