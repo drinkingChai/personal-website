@@ -2,7 +2,7 @@ input, textarea {
   font-size: 1em;
   outline: none;
   border: solid 2px $charlestongreen;
-  // border-radius: 3px;
+  border-radius: 0;
   padding: 10px;
   width: 100%;
 }
@@ -15,14 +15,14 @@ button {
 
 .contact-container {
   display: grid;
-  grid-gap: 55px;
+  grid-gap: 35px;
   & .social-container {
     text-align: center;
     position: relative;
     & .contact-links {
       display: grid;
       grid-gap: 15px;
-      grid-auto-flow: column;
+      grid-auto-flow: row;
       justify-content: center;
       align-items: center;
       padding: 30px 0;

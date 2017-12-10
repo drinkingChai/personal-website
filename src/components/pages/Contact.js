@@ -57,16 +57,8 @@ class Contact extends Component {
             <Modal className='fading'><SentSuccessMessage /></Modal> :
             null
         }
-        <div className='social-container'>
-          <h3>You can reach me via: </h3>
-          <div className='contact-links'>
-            <a href={ me.social.linkedin } className='btn linkedin' target='_blank'>LinkedIn</a>
-            <a href={ `mailto:${ me.social.email }` } className='btn email'>{ me.social.email }</a>
-          </div>
-        </div>
-
         <form className='contact-form-container' onSubmit={ this.handleSubmit }>
-          <h3>Or contact me below!</h3>
+          <h3>Send me a message!</h3>
           <input value={ this.state.email } onChange={ this.handleChange('email') } placeholder='Your email' type='email' required/>
 
           <textarea value={ this.state.message } onChange={ this.handleChange('message') } rows={ 10 } placeholder='Message'></textarea>
@@ -75,6 +67,14 @@ class Contact extends Component {
             <button className='btn default'>Contact</button>
           </div>
         </form>
+
+        <div className='social-container'>
+          <h3>You can also reach me via: </h3>
+          <div className='contact-links'>
+            <a href={ me.social.linkedin } className='btn linkedin' target='_blank'>LinkedIn</a>
+            <a href={ `mailto:${ me.social.email }` } className='btn email'>{ me.social.email }</a>
+          </div>
+        </div>
       </div>
     )
   }
