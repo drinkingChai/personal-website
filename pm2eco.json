@@ -1,0 +1,9 @@
+{
+  "apps": [{
+    "name": "personal-website",
+    "script": "server.js",
+    "env": {
+      "PORT": "443"
+    }
+  }]
+}
