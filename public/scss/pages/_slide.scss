@@ -1,6 +1,51 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 50px;
+      font-size: 1em;
+  & img {
+    max-height: 500px;
+    filter:hue-rotate(320deg);
+    z-index: -99;
+  }
+  & .info {
+    padding: 0 0 0 30px;
+    & > div {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      margin-bottom: 25px;
+    }
+    & .label {
+      font-family: 'Spectral SC', serif;
+      margin-right: 25px;
+      line-height: 1.5em;
+    }
+    & p {
+      line-height: 1.5em;
+    }
+  }
+  & h3 {
+    font-family: 'Spectral SC', serif;
+    font-size: 2em;
+    margin-bottom: 50px;
+    line-height: 1em;
+    text-align: center;
+  }
+}
 .about-splash {
   overflow: hidden;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  animation: 100ms fall-behind linear forwards;
+  animation-delay: 3800ms;
+}
+.about {
   position: relative;
+  height: calc(100vh - 110px);
+}
+.about .home {
+  animation: 100ms remove linear forwards;
+  animation-delay: 2000ms;
 }
 
 .slides {
@@ -11,26 +56,48 @@
 }
 .slide {
   flex-grow: 1;
+  width: 33.33%;
   height: calc(100vh - 110px);
   background-color: $whitesmoke;
   z-index: 99;
-  animation: slidedown 2s forwards;
+  animation: slidedown 4s forwards;
 }
 
 .slide-1 {
-  background-color: red;
+  background-color: lighten($darkgunmetal, 20%);
   animation-delay: 200ms;
 }
 .slide-2 {
-  background-color: green;
+  background-color: $darkgunmetal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slide-3 {
-  background-color: teal;
+  background-color: lighten($darkgunmetal, 10%);
   animation-delay: 500ms;
 }
 
 @keyframes slidedown {
-  100% {
+  30% {
     transform: translateY(100%);
+  }
+  75% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes remove {
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes fall-behind {
+  100% {
+    z-index: -999;
   }
 }

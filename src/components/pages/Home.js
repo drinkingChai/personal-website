@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 
 import { Projects } from './Projects'
 
-const Home = ({ me, projects }) => {
+const Home = ({ me, projects, className }) => {
   window.scrollTo(0, 0)
   
   return (
-    <div className='home'>
+    <div className={ `home ${className || ''}` }>
       <div className='me'>
         <div className='click-the-bat'>Click the bat!</div>
-        <div className='batman'></div>
+        <Link to='/about' className='batman'></Link>
         <h1>Wasif Zaman</h1>
         <h2>Full Stack Developer</h2>
       </div>
