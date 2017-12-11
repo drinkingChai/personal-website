@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 const Footer = () => {
   return (
     <footer>
-      Made with <i className='ion-heart'></i> by Wasif Zaman
+      Made with <i className="fab fa-react"></i> by Wasif Zaman
     </footer>
   )
 }

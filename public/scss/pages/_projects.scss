@@ -3,31 +3,20 @@
   grid-gap: 20px;
   & .project-card {
     background-color: $whitesmoke;
-    box-shadow: $shadow1;
     border-radius: 3px;
-    padding: 30px;
     display: grid;
-    grid-gap: 10px;
+    grid-template-columns: 3fr 1fr;
+    max-width: 700px;
+    box-shadow: $shadow1;
+    & .screenshot {
+      max-width: 100%;
+      max-height: 300px;
+    }
     & .project-details-container {
       display: grid;
       grid-gap: 5px;
       & p {
         padding: 10px 0;
-      }
-    }
-    & .tech-used-container {
-      display: flex;
-      font-size: .9em;
-      & > * {
-        margin-right: 5px;
-        align-self: center;
-      }
-      & > *:not(:first-child) {
-        border-bottom: solid 2px $charlestongreen;
-        padding: 3px;
-      }
-      &.hidden {
-        display: none;
       }
     }
     & .links-container {
@@ -47,21 +36,6 @@
       }
       & .project-url {
         position: relative;
-        &:after {
-          content: '';
-          height: 2px;
-          width: 0;
-          background-color: $charlestongreen;
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          transition: width 200ms;
-        }
-        &:hover {
-          &:after {
-            width: 100%;
-          }
-        }
       }
     }
   }
