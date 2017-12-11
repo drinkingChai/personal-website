@@ -10,7 +10,8 @@ const Home = ({ me, projects }) => {
   return (
     <div className='home'>
       <div className='me'>
-        <div className='batman'></div>
+        <div className='click-the-bat'>Click the bat!</div>
+        <Link to='/projects' className='batman'></Link>
         <h1>Wasif Zaman</h1>
         <h2>Full Stack Developer</h2>
       </div>
