@@ -11,7 +11,7 @@ const Home = ({ me, projects }) => {
     <div className='home'>
       <div className='me'>
         <div className='click-the-bat'>Click the bat!</div>
-        <Link to='/projects' className='batman'></Link>
+        <div className='batman'></div>
         <h1>Wasif Zaman</h1>
         <h2>Full Stack Developer</h2>
       </div>

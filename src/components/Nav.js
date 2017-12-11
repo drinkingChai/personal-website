@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 let links = [
   { path: '/', label: 'Home' },
   { path: '/projects', label: 'Projects' },
-  { path: '/contact', label: 'Contact' },
+  // { path: '/contact', label: 'Contact' },
   { path: '/about', label: 'About' },
 ]
 

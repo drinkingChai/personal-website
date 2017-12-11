@@ -1,0 +1,36 @@
+.about-splash {
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  position: absolute;
+  top: -100%;
+  display: flex;
+  width: 100%;
+}
+.slide {
+  flex-grow: 1;
+  height: calc(100vh - 110px);
+  background-color: $whitesmoke;
+  z-index: 99;
+  animation: slidedown 2s forwards;
+}
+
+.slide-1 {
+  background-color: red;
+  animation-delay: 200ms;
+}
+.slide-2 {
+  background-color: green;
+}
+.slide-3 {
+  background-color: teal;
+  animation-delay: 500ms;
+}
+
+@keyframes slidedown {
+  100% {
+    transform: translateY(100%);
+  }
+}
