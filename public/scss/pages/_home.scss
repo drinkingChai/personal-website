@@ -1,14 +1,11 @@
-.me-container {
-  position: relative;
+.me {
   background-color: $darkgunmetal;
   color: $whitesmoke;
-}
-.me {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
+  height: calc(100vh - 110px);
   text-align: center;
   & h1 {
     font-size: 5em;
@@ -17,16 +14,29 @@
     margin-bottom: 20px;
     font-family: 'Spectral SC', serif;
   }
-  @media screen and (max-height: 850px) {
-    height: calc(100vh);
+  & .batman {
+    position: relative;
+    &:after {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      content: '';
+      border: solid 5px #EA437B;
+      height: 100%;
+      width: 100%;
+      animation: pulse 2s infinite;
+    }
   }
 }
 
-.home-projects-container {
-  & .see-more {
-    margin: 0 auto;
-    margin-top: 20px;
-    text-align: center;
-    box-shadow: $shadow1;
+@keyframes pulse {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+  100% {
+    opacity: 0;
   }
 }

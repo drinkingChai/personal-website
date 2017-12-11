@@ -9,17 +9,10 @@ const Home = ({ me, projects }) => {
   
   return (
     <div className='home'>
-      <div className='me-container'>
-        <div className='me'>
-          <div className='batman'></div>
-          <h1>Wasif Zaman</h1>
-          <h2>Full Stack Developer</h2>
-        </div>
-      </div>
-
-      <div className='home-projects-container'>
-        <Projects projects={ projects.splice(0, 3) } />
-        <Link to='/projects' className='btn inverse see-more'>See more!</Link>
+      <div className='me'>
+        <div className='batman'></div>
+        <h1>Wasif Zaman</h1>
+        <h2>Full Stack Developer</h2>
       </div>
     </div>
   )

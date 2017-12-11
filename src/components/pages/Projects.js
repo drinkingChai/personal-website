@@ -11,16 +11,12 @@ export const Projects = ({ projects }) => {
     {
       projects.length && projects.map((project, i) =>
         <div className='project-card' key={ i }>
-          <div className='project-screen-container'>
-          {
-            project.screenshots && project.screenshots.map((screen, i) =>
-              <img key={ i } src={ `../data/${screen}` } className='screenshot'/>
-            )
-          }
-          </div>
           <div className='project-info'>
-            <h3>{ project.name }</h3>
+            <h4>{ project.name }</h4>
+            <h5>{ project.role }</h5>
+            <h5>@{ project.location }</h5>
           </div>
+          <p>{ project.description }</p>
         </div>
       )
     }
