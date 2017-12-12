@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 
+import LinkTransition from './LinkTransition'
+
 let links = [
   { path: '/', label: 'Home' },
   { path: '/projects', label: 'Projects' },
@@ -14,7 +16,7 @@ const Nav = ({ location, blog }) => {
   return (
     <nav>
     {
-      links.map((link, i) => <Link to={ link.path } key={ i } className={ `${ pathname == link.path ? 'active' : '' }` }>{ link.label }</Link>)
+      links.map((link, i) => <LinkTransition to={ link.path } key={ i } className={ `${ pathname == link.path ? 'active' : '' }` }>{ link.label }</LinkTransition>)
     }
       <a href={ blog } target='_blank'>Blog</a>
     </nav>

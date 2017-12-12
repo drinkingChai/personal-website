@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
+import Transition from './Transition'
 import Nav from './Nav'
 import Footer from './Footer'
 import Routes from './Routes'
@@ -21,6 +22,7 @@ class Root extends React.Component {
   render = () => {
     return (
       <div>
+        <Transition />
         <Nav />
 
         <main>

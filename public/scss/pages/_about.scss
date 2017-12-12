@@ -1,3 +1,7 @@
+.about {
+  position: relative;
+  min-height: calc(100vh - 110px);
+}
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,70 +81,5 @@
     margin-bottom: 50px;
     line-height: 1em;
     text-align: center;
-  }
-}
-.about-splash {
-  overflow: hidden;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  animation: 100ms fall-behind linear forwards;
-  animation-delay: 4200ms;
-}
-.about {
-  position: relative;
-  min-height: calc(100vh - 110px);
-}
-.about .home {
-  animation: 100ms remove linear forwards;
-  animation-delay: 2000ms;
-}
-
-.slides {
-  position: absolute;
-  // top: -100%;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-.slide {
-  flex-grow: 1;
-  height: calc(100vh);
-  background-color: $whitesmoke;
-  z-index: 99;
-  transform: translateY(-100%);
-  animation: slidedown 4s forwards;
-}
-
-$slidecols: #1A281F, #635255, #CE7B91, #C0E8F9, #B8D3D1;
-
-@for $i from 1 through 15 {
-  .slide:nth-child(#{$i}) {
-    $percent: percentage($i/100);
-    background-color: lighten(nth($slidecols, random(4) + 1), $percent);
-    animation-delay: random(500) + ms;
-  }
-}
-
-@keyframes slidedown {
-  30% {
-    transform: translateY(0%);
-  }
-  75% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100vh);
-  }
-}
-
-@keyframes remove {
-  100% {
-    transform: translateY(-200%);
-  }
-}
-
-@keyframes fall-behind {
-  100% {
-    z-index: -999;
   }
 }

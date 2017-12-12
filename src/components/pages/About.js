@@ -6,26 +6,6 @@ import Home from './Home'
 const About = ({ me }) => {
   return (
     <div className='about'>
-    {
-      <div className='about-splash'>
-        <div className='slides'>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-          <div className='slide'></div>
-        </div>
-      </div>
-    }
-
       <div className='about-content'>
         <h3>About</h3>
         <div className='info'>
