@@ -5,6 +5,9 @@
   & h3 {
     text-align: center;
   }
+  & .page-title {
+    margin-bottom: 45px;
+  }
 }
 
 .project-card {
@@ -15,7 +18,10 @@
   position: fixed;
   width: 25px;
   right: 10px;
-  top: 150px;
+  top: calc((100vh) / 3);
+  @media screen and (max-width: 320px) {
+    width: 20px;
+  }
 
   & .bubble {
     cursor: pointer;
@@ -30,6 +36,9 @@
       background-color: #932F6D;
       transform: rotate(90deg);
       border: solid 8px #E07BE0;
+    }
+    @media screen and (max-width: 320px) {
+      height: 20px;
     }
   }
 }
