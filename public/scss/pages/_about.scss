@@ -72,6 +72,13 @@
     & p {
       line-height: 1.5em;
     }
+    & p.social-links {
+      display: flex;
+    }
+    & p svg {
+      font-size: 1.5em;
+      margin-right: .7em;
+    }
   }
   & h3 {
     grid-row: 1;
