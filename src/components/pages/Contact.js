@@ -11,6 +11,7 @@ const Contact = ({ email }) => {
         <h3>Contact</h3>
         <p>{ email }</p>
         <CopyToClipboard text={ email }><span>Click to copy my email address</span></CopyToClipboard>
+        <p>Or</p>
         <a href={ `mailto:${email}` }>Open your email app</a>
       </div>
     </div>

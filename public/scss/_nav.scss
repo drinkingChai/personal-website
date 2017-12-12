@@ -27,4 +27,11 @@ nav {
       border-color: $darkgunmetal;
     }
   }
+  &.pink {
+    background-color: $pink;
+    color: $darkgunmetal;
+    & .active {
+      border-color: $darkgunmetal;
+    }
+  }
 }

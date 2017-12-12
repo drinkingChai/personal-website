@@ -8,31 +8,22 @@ export const Projects = ({ projects }) => {
   
   return (
     <div className='projects-container'>
-    {
-      projects.length && projects.map((project, i) =>
-        <div className='project-card' key={ i }>
-          <div className='project-info'>
-            <h4>{ project.name }</h4>
-            <h5>{ project.role }</h5>
-            <h5>@{ project.location }</h5>
-          </div>
-          <p>{ project.description }</p>
-        </div>
-      )
-    }
-    </div>
-  )
-}
-
-export const MyProjects = ({ projects }) => {
-  return (
-    <div className='my-projects'>
       <h3 className='page-title'>Projects</h3>
-
-      <Projects projects={ projects } />
+      {
+        projects.length && projects.map((project, i) =>
+          <div className='project-card' key={ i }>
+            <div className='project-info'>
+              <h4>{ project.name }</h4>
+              <h5>{ project.role }</h5>
+              <h5>@{ project.location }</h5>
+            </div>
+            <p>{ project.description }</p>
+          </div>
+        )
+      }
     </div>
   )
 }
 
 const mapState = ({ projects }) => ({ projects })
-export default connect(mapState)(MyProjects)
+export default connect(mapState)(Projects)

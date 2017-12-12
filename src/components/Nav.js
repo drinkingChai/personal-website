@@ -14,7 +14,7 @@ let links = [
 const Nav = ({ location }) => {
   const { pathname } = location
   return (
-    <nav className={ `${pathname != '/' ? 'inverse' : ''}` }>
+    <nav className={ `${pathname == '/projects' ? 'pink' : pathname != '/' ? 'inverse' : ''}` }>
     {
       links.map((link, i) => <LinkTransition to={ link.path } key={ i } className={ `${ pathname == link.path ? 'active' : '' }` }>{ link.label }</LinkTransition>)
     }
