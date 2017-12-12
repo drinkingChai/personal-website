@@ -1,3 +1,15 @@
 .contact-container {
   min-height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .emails {
+    display: grid;
+    text-align: center;
+    grid-gap: 10px;
+    & span, a {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }
