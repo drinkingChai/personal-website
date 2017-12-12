@@ -28,7 +28,9 @@ class Projects extends Component {
               smooth={ true }
               offset={ -100 }
               duration={ 300 }
-              className={ `bubble ${ this.state.activeProject == i ? 'active' : '' }` }
+              spy={ true }
+              activeClass={ 'active' }
+              className='bubble'
               key={ i }
               onClick={ () => this.scrollTo(i) }></ScrollLink>
           )
