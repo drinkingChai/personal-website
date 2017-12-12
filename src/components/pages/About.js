@@ -7,7 +7,7 @@ import Home from './Home'
 
 const About = ({ me }) => {
   return (
-    <div className='about'>
+    <div className='about-page'>
       <div className='about-content'>
         <h3>About</h3>
         <div className='info'>

@@ -20,15 +20,22 @@ nav {
     height: 48px;
     width: 48px;
   }
-  &.inverse {
+  &.about {
     background-color: $whitesmoke;
     color: $darkgunmetal;
     & .active {
       border-color: $darkgunmetal;
     }
   }
-  &.pink {
+  &.projects {
     background-color: $pink;
+    color: $darkgunmetal;
+    & .active {
+      border-color: $darkgunmetal;
+    }
+  }
+  &.contact {
+    background-color: $lightblue;
     color: $darkgunmetal;
     & .active {
       border-color: $darkgunmetal;
