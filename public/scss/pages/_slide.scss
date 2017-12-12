@@ -129,7 +129,7 @@ $slidecols: #1A281F, #635255, #CE7B91, #C0E8F9, #B8D3D1;
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(-100vh);
   }
 }
 
