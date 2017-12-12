@@ -6,6 +6,7 @@ import { toggleTransition } from '../actions'
 
 class LinkTransition extends Component {
   transition = () => {
+    if (this.props.transition) return
     this.props.toggleTransition()
     setTimeout(() => {
       this.props.history.push(this.props.to)
@@ -16,11 +17,11 @@ class LinkTransition extends Component {
   }
 
   render = () => {
-    console.log(this.props)
     return (
-      <a onClick={ this.transition } className={ this.props.className }>{ Children.map(this.props.children, (child, i) => child)}</a>
+      <a onClick={ this.transition } className={ this.props.className } style={{ cursor: 'pointer' }}>{ Children.map(this.props.children, (child, i) => child)}</a>
     )
   }
 }
 
-export default withRouter(connect(null, { toggleTransition })(LinkTransition))
+const mapState = ({ transition }) => ({ transition })
+export default withRouter(connect(mapState, { toggleTransition })(LinkTransition))
