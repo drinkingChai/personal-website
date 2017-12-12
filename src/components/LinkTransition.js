@@ -6,13 +6,14 @@ import { toggleTransition } from '../actions'
 
 class LinkTransition extends Component {
   transition = () => {
-    if (this.props.transition) return
-    this.props.toggleTransition()
+    const { transition, location, to, history, toggleTransition } = this.props
+    if (transition || location.pathname == to) return
+    toggleTransition()
     setTimeout(() => {
-      this.props.history.push(this.props.to)
+      history.push(to)
     }, 2000)
     setTimeout(() => {
-      this.props.toggleTransition()
+      toggleTransition()
     }, 4500)
   }
 

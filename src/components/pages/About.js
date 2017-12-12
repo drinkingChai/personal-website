@@ -26,10 +26,10 @@ const About = ({ me }) => {
           <div>
             <span className='label'>Social:</span> 
             <p className='social-links'>
-              <a href={ me.social && me.social.linkedin } target='_blank'><i class="fab fa-linkedin"></i></a>
-              <a href={ me.social && me.social.medium } target='_blank'><i class="fab fa-medium"></i></a>
-              <a href={ me.social && me.social.twitter } target='_blank'><i class="fab fa-twitter-square"></i></a>
-              <a href={ me.social && me.social.facebook } target='_blank'><i class="fab fa-facebook-square"></i></a>
+              <a href={ me.social && me.social.linkedin } target='_blank'><i className="fab fa-linkedin"></i></a>
+              <a href={ me.social && me.social.medium } target='_blank'><i className="fab fa-medium"></i></a>
+              <a href={ me.social && me.social.twitter } target='_blank'><i className="fab fa-twitter-square"></i></a>
+              <a href={ me.social && me.social.facebook } target='_blank'><i className="fab fa-facebook-square"></i></a>
             </p>
           </div>
         </div>
