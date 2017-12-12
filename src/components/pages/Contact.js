@@ -10,9 +10,9 @@ const Contact = ({ email }) => {
       <div className='emails'>
         <h3>Contact</h3>
         <p>{ email }</p>
-        <CopyToClipboard text={ email }><span>Click to copy my email address</span></CopyToClipboard>
+        <CopyToClipboard text={ email }><span>click to copy my email address</span></CopyToClipboard>
         <p>Or</p>
-        <a href={ `mailto:${email}` }>Open your email app</a>
+        <a href={ `mailto:${email}` }>open your email app</a>
       </div>
     </div>
   )
