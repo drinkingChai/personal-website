@@ -7,21 +7,19 @@ import LinkTransition from './LinkTransition'
 let links = [
   { path: '/', label: 'Home' },
   { path: '/projects', label: 'Projects' },
-  // { path: '/contact', label: 'Contact' },
   { path: '/about', label: 'About' },
+  { path: '/contact', label: 'Contact' }
 ]
 
-const Nav = ({ location, blog }) => {
+const Nav = ({ location }) => {
   const { pathname } = location
   return (
-    <nav>
+    <nav className={ `${pathname != '/' ? 'inverse' : ''}` }>
     {
       links.map((link, i) => <LinkTransition to={ link.path } key={ i } className={ `${ pathname == link.path ? 'active' : '' }` }>{ link.label }</LinkTransition>)
     }
-      <a href={ blog } target='_blank'>Blog</a>
     </nav>
   )
 }
 
-const mapState = ({ me }) => ({ blog: me.social && me.social.blog })
-export default withRouter(connect(mapState)(Nav))
+export default withRouter(Nav)

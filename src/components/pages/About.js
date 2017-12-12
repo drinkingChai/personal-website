@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Home from './Home'
 
+// add blog and social icons
+
 const About = ({ me }) => {
   return (
     <div className='about'>

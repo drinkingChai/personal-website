@@ -3,4 +3,8 @@ footer {
   text-align: center;
   background-color: $darkgunmetal;
   color: $whitesmoke;
+  &.inverse {
+    background-color: $whitesmoke;
+    color: $darkgunmetal;
+  }
 }

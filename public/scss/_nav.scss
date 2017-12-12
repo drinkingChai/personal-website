@@ -8,6 +8,7 @@ nav {
   background-color: $darkgunmetal;
   color: $whitesmoke;
   z-index: 99;
+  transition: all 500ms;
   & a {
     padding: 15px 10px;
     color: inherit;
@@ -18,5 +19,12 @@ nav {
   & .batman {
     height: 48px;
     width: 48px;
+  }
+  &.inverse {
+    background-color: $whitesmoke;
+    color: $darkgunmetal;
+    & .active {
+      border-color: $darkgunmetal;
+    }
   }
 }
