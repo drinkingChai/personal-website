@@ -1,30 +1,77 @@
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   padding: 50px;
-      font-size: 1em;
+  font-size: 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+  @media screen and (max-width: 860px) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  & .image-container {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-start;
+    @media screen and (max-width: 660px) {
+      grid-column: span 2;  
+      justify-content: center;
+      & > img {
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        box-shadow: none;
+      }
+      padding-bottom: 30px;
+    }
+  }
   & img {
+    height: auto;
+    width: calc(height * 0.75);
     max-height: 500px;
-    filter:hue-rotate(320deg);
+    filter:hue-rotate(220deg);
+    border-radius: 2px;
+    box-shadow: $shadow1;
     z-index: -99;
+    transition: all 300ms;
+    @media screen and (max-width: 860px) {
+      max-height: 300px;
+    }
   }
   & .info {
-    padding: 0 0 0 30px;
+    grid-row: 2;
+    grid-column: 1;
+    padding: 0 30px 0 0;
+    @media screen and (max-width: 660px) {
+      grid-row: 3;
+      grid-column: span 2;  
+      padding-right: 0;
+    }
     & > div {
       display: grid;
       grid-template-columns: 80px 1fr;
       margin-bottom: 25px;
+      @media screen and (max-width: 660px) {
+        grid-template-columns: none;
+      }
     }
     & .label {
       font-family: 'Spectral SC', serif;
       margin-right: 25px;
       line-height: 1.5em;
+      @media screen and (max-width: 660px) {
+        font-weight: 900;
+      }
     }
     & p {
       line-height: 1.5em;
     }
   }
   & h3 {
+    grid-row: 1;
+    grid-column: span 2;
     font-family: 'Spectral SC', serif;
     font-size: 2em;
     margin-bottom: 50px;
@@ -37,11 +84,11 @@
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   animation: 100ms fall-behind linear forwards;
-  animation-delay: 3800ms;
+  animation-delay: 4200ms;
 }
 .about {
   position: relative;
-  height: calc(100vh - 110px);
+  min-height: calc(100vh - 110px);
 }
 .about .home {
   animation: 100ms remove linear forwards;
@@ -50,43 +97,39 @@
 
 .slides {
   position: absolute;
-  top: -100%;
+  // top: -100%;
   display: flex;
   width: 100%;
+  height: 100vh;
 }
 .slide {
   flex-grow: 1;
-  width: 33.33%;
-  height: calc(100vh - 110px);
+  height: calc(100vh);
   background-color: $whitesmoke;
   z-index: 99;
+  transform: translateY(-100%);
   animation: slidedown 4s forwards;
 }
 
-.slide-1 {
-  background-color: lighten($darkgunmetal, 20%);
-  animation-delay: 200ms;
-}
-.slide-2 {
-  background-color: $darkgunmetal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.slide-3 {
-  background-color: lighten($darkgunmetal, 10%);
-  animation-delay: 500ms;
+$slidecols: #1A281F, #635255, #CE7B91, #C0E8F9, #B8D3D1;
+
+@for $i from 1 through 15 {
+  .slide:nth-child(#{$i}) {
+    $percent: percentage($i/100);
+    background-color: lighten(nth($slidecols, random(4) + 1), $percent);
+    animation-delay: random(500) + ms;
+  }
 }
 
 @keyframes slidedown {
   30% {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
   75% {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
   100% {
-    transform: translateY(200%);
+    transform: translateY(100%);
   }
 }
 
