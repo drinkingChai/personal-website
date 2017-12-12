@@ -1,16 +1,17 @@
 .transition {
-  overflow: hidden;
-  position: absolute;
+  // overflow: hidden;
+  // position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   animation: 100ms fall-behind linear forwards;
   animation-delay: 4200ms;
 }
 .slides {
-  position: absolute;
+  position: fixed;
   // top: -100%;
   display: flex;
   width: 100%;
   height: 100vh;
+  z-index: 99;
 }
 .slide {
   flex-grow: 1;
