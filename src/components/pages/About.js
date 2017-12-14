@@ -6,6 +6,8 @@ import Home from './Home'
 // add blog and social icons
 
 const About = ({ me }) => {
+  window.scrollTo(0, 0)
+  
   return (
     <div className='about-page'>
       <div className='about-content'>
