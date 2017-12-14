@@ -6,22 +6,32 @@
     text-align: center;
   }
   & .page-title {
-    margin-bottom: 5px;
+    margin-bottom: 40px;
   }
-  display: grid;
-  grid-gap: 40px;
 }
 
 .under-construct {
   text-align: center;
 }
 
+.projects-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  & > .project-card {
+    margin-bottom: 40px;
+    margin-right: 40px;
+  }
+}
+
 .project-card {
   // min-height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
-  box-shadow: $shadow1;
+  box-shadow: $shadow2;
   height: 500px;
+  max-width: 520px;
   background-color: $whitesmoke;
   & > div:first-child {
   }

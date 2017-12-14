@@ -37,23 +37,24 @@ class Projects extends Component {
         }
         </div>
         <h3 className='page-title'>Projects</h3>
-        <p className='under-construct'><i className="fas fa-exclamation-triangle"></i> page under construction! <i className="fas fa-exclamation-triangle"></i></p>
-        {
-          projects.length && projects.map((project, i) =>
-            <Element className='project-card element' key={ i } name={ `project-${i}` }>
-              { project.thumbnail ?
-                <div className='thumbnail-container'>
-                  <img src={ project.thumbnail } />
-                </div> : null }
-              <div className='project-info'>
-                <h4>{ project.name }</h4>
-                <p>{ project.description }</p>
-                <a href={ project.url }>Demo</a>
-                <a href={ project.github }>GitHub</a>
-              </div>
-            </Element>
-          )
-        }
+        <div className='projects-card-container'>
+          {
+            projects.length && projects.map((project, i) =>
+              <Element className='project-card element' key={ i } name={ `project-${i}` }>
+                { project.thumbnail ?
+                  <div className='thumbnail-container'>
+                    <img src={ project.thumbnail } />
+                  </div> : null }
+                <div className='project-info'>
+                  <h4>{ project.name }</h4>
+                  <p>{ project.description }</p>
+                  <a href={ project.url }>Demo</a>
+                  <a href={ project.github }>GitHub</a>
+                </div>
+              </Element>
+            )
+          }
+        </div>
       </div>
     )
   }
