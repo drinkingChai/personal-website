@@ -1,0 +1,43 @@
+$w1: rgba(255,209,102,.7);
+$w2: rgba(255,209,102,1);
+$z1: rgba(6,214,160,0.7);
+$z2: rgba(38,84,124,0.8);
+$logo-background: #EF476F;
+
+.logo-large {
+  height: 380px;
+  width: 380px;
+  
+  background:
+    linear-gradient(135deg, $z1 50%, transparent 50%),
+    linear-gradient(315deg, rgba(255,252,249, 0.8) 50%, transparent 50%),
+    linear-gradient(45deg, $z2 50%, transparent 50%),
+    linear-gradient(225deg, $z2 50%, transparent 50%),
+    linear-gradient(135deg, $w1 50%, transparent 50%),
+    linear-gradient(225deg, $w1 50%, transparent 50%),
+    linear-gradient(135deg, $w2 50%, transparent 50%),
+    linear-gradient(225deg, $w2 50%, transparent 50%),
+    $logo-background;
+  
+  background-size:
+    100px 100px,
+    100px 100px,
+    100px 100px,
+    100px 100px,
+    100px 100px,
+    100px 100px,
+    100px 100px,
+    100px 100px;
+  
+  background-position:
+    190px 80px,
+    90px 130px,
+    190px 140px,
+    90px 100px,
+    140px 190px,
+    40px 190px,
+    240px 190px,
+    140px 190px;
+  
+  background-repeat: no-repeat;
+}
