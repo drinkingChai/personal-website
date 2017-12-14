@@ -26,7 +26,7 @@ class Projects extends Component {
             <ScrollLink
               to={ `project-${i}` }
               smooth={ true }
-              offset={ -100 }
+              offset={ -80 }
               duration={ 300 }
               spy={ true }
               activeClass={ 'active' }
