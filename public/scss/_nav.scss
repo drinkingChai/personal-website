@@ -20,6 +20,16 @@ nav {
     height: 48px;
     width: 48px;
   }
+  & .logo-link {
+    padding: 5px 4px 4px 4px;
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    transition: all 700ms;
+    &.visible {
+      opacity: 1;
+    }
+  }
   &.about {
     background-color: $whitesmoke;
     color: $darkgunmetal;

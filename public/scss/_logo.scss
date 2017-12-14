@@ -41,3 +41,41 @@ $logo-background: #EF476F;
   
   background-repeat: no-repeat;
 }
+
+.logo-mini {
+  width: 37px;
+  height: 37px;
+  
+  background:
+    linear-gradient(135deg, $z1 49%, transparent 50%),
+    linear-gradient(315deg, rgba(255,252,249, 0.8) 49%, transparent 50%),
+    linear-gradient(45deg, $z2 49%, transparent 50%),
+    linear-gradient(225deg, $z2 49%, transparent 50%),
+    linear-gradient(135deg, rgba(255,209,102,.9) 49%, transparent 50%),
+    linear-gradient(225deg, $w1 49%, transparent 50%),
+    linear-gradient(135deg, $w2 49%, transparent 50%),
+    linear-gradient(225deg, rgba(255,209,102,.8) 49%, transparent 50%),
+    $logo-background;
+  
+  background-size:
+    29% 29%,
+    29% 29%,
+    29% 29%,
+    29% 29%,
+    28% 28%,
+    28% 28%,
+    28% 28%,
+    28% 28%;
+  
+  background-position:
+    72% 30%,
+    32% 45%,
+    72% 51%,
+    32% 35%,
+    56% 74%,
+    18% 74%,
+    80% 74%,
+    42.6% 74%;
+  
+  background-repeat: no-repeat;
+}
