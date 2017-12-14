@@ -3,7 +3,7 @@
   // position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   animation: 100ms fall-behind linear forwards;
-  animation-delay: 4200ms;
+  animation-delay: 4800ms;
 }
 .slides {
   position: fixed;
@@ -24,8 +24,17 @@
 
 $slidecols: #1A281F, #635255, #CE7B91, #C0E8F9, #B8D3D1;
 
-@for $i from 1 through 15 {
+@for $i from 1 through 100 {
   .slide:nth-child(#{$i}) {
+    $percent: percentage($i/100);
+    background-color: lighten(nth($slidecols, random(4) + 1), $percent);
+    animation-delay: random(500) + ms;
+  }
+}
+
+@for $i from 1 through 100 {
+  $n: 100 + $i;
+  .slide:nth-child(#{$n}) {
     $percent: percentage($i/100);
     background-color: lighten(nth($slidecols, random(4) + 1), $percent);
     animation-delay: random(500) + ms;
