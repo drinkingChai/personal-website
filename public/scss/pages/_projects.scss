@@ -12,6 +12,7 @@
 
 .project-card {
   min-height: calc(100vh - 48px);
+  display: grid;
 }
 
 .bubble-scrollbar {
