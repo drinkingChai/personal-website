@@ -1,6 +1,6 @@
 .contact-container {
   background-color: $lightblue;
-  min-height: calc(100vh - 108px);
+  min-height: $pageminheight;
   display: flex;
   align-items: center;
   justify-content: center;

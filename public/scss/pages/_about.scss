@@ -1,6 +1,6 @@
 .about-page {
   position: relative;
-  min-height: calc(100vh - 108px);
+  min-height: $pageminheight;
 }
 .about-content {
   display: grid;

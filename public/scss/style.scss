@@ -43,6 +43,7 @@ h5 { font-size: .9em; }
 @import '_animations.scss';
 
 // pages
+$pageminheight: calc(100vh - 106px);
 @import '_nav.scss';
 @import '_footer.scss';
 @import './pages/_home.scss';
