@@ -2,24 +2,29 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import SocialLinks from '../SocialLinks'
 
-const Contact = ({ email, resume }) => {
+const Contact = ({ social }) => {
   // business card
+  if (!social) return <div></div>
+    
   return (
     <div className='contact-container'>
       <div className='emails'>
         <h3>Contact</h3>
-        <p>{ email }</p>
-        <CopyToClipboard text={ email }><span>click to copy my email address</span></CopyToClipboard>
+        <p>{ social.email }</p>
+        <CopyToClipboard text={ social.email }><span>click to copy my email address</span></CopyToClipboard>
         <p>Or</p>
-        <a href={ `mailto:${email}` }>open your email app</a>
+        <a href={ `mailto:${social.email}` }>open your email app</a>
         <br/>
         <br/>
-        <a href={ resume } target='_blank'>view my resume</a>
+        <a href={ social.resume } target='_blank'>view my resume</a>
+        <br/>
+        <SocialLinks social={ social } />
       </div>
     </div>
   )
 }
 
-const mapState = ({ me }) => ({ email: me.social && me.social.email, resume: me.social && me.social.resume })
+const mapState = ({ me }) => ({ social: me.social })
 export default connect(mapState)(Contact)

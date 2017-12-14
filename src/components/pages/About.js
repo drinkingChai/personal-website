@@ -2,8 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Home from './Home'
-
-// add blog and social icons
+import SocialLinks from '../SocialLinks'
 
 const About = ({ me }) => {
   window.scrollTo(0, 0)
@@ -27,12 +26,7 @@ const About = ({ me }) => {
           </div>
           <div>
             <span className='label'>Social:</span> 
-            <p className='social-links'>
-              <a href={ me.social && me.social.linkedin } target='_blank'><i className="fab fa-linkedin"></i></a>
-              <a href={ me.social && me.social.medium } target='_blank'><i className="fab fa-medium"></i></a>
-              <a href={ me.social && me.social.twitter } target='_blank'><i className="fab fa-twitter-square"></i></a>
-              <a href={ me.social && me.social.facebook } target='_blank'><i className="fab fa-facebook-square"></i></a>
-            </p>
+            <SocialLinks social={ me.social }/>
           </div>
         </div>
         <div className='image-container'>

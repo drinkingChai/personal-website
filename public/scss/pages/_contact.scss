@@ -13,4 +13,10 @@
       text-decoration: underline;
     }
   }
+  & .social-links {
+    justify-content: center;
+    & svg {
+      margin: 0 7px;
+    }
+  }
 }
