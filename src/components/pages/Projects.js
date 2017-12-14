@@ -48,8 +48,10 @@ class Projects extends Component {
                 <div className='project-info'>
                   <h4>{ project.name }</h4>
                   <p>{ project.description }</p>
-                  <a href={ project.url }>Demo</a>
-                  <a href={ project.github }>GitHub</a>
+                  <div className='project-links'>
+                    <a href={ project.url } target='_blank'>Demo</a>
+                    <a href={ project.github } target='_blank'>Code</a>
+                  </div>
                 </div>
               </Element>
             )
