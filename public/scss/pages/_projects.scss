@@ -64,22 +64,10 @@
       & > * {
         padding: 10px;
         text-align: center;
-        // text-transform: uppercase;
         position: relative;
-        background-color: $charlestongreen;
-        color: $whitesmoke;
+        background-color: transparent;
         border-radius: 3px;
-        box-shadow: $shadow1;
-        &:after {
-          content: '';
-          // width: 60%;
-          // position: absolute;
-          // bottom: 0;
-          // left: 20%;
-          // height: 100%;
-          // background-color: rgba(247, 233, 251, .3);
-          // border-bottom: solid 2px #7F5A83;
-        }
+        border: solid 1px $charlestongreen;
       }
     }
   }
