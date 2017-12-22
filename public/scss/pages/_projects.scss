@@ -1,7 +1,6 @@
 .projects-container {
   background-color: $pink;
   color: white;
-  // ** //
   min-height: $pageminheight;
   padding: 20px;
   & h3 {
@@ -27,14 +26,10 @@
 }
 
 .project-card {
-  // min-height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
-  // box-shadow: $shadow2;
   box-shadow: $shadow2;
-  // height: 500px;
   max-width: 520px;
-  // background-color: #F8F8F8;
   border-radius: 3px;
   background-color: #55495F;
   & > div:first-child {
@@ -43,17 +38,15 @@
     width: 100%;
     max-height: 40vh;
     object-fit: cover;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
   & .project-info {
-    // min-height: 200px;
     height: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    & > *:not(:last-child) {
-      // margin-bottom: 25px;
-    }
     & > p {
       font-size: 1.1em;
       line-height: 1.5em;
@@ -72,9 +65,7 @@
         padding: 10px;
         text-align: center;
         position: relative;
-        // background-color: transparent;
         border-radius: 30px;
-        // border: solid 1px $charlestongreen;
         border: solid 1px white;
       }
     }
@@ -94,20 +85,13 @@
     cursor: pointer;
     display: block;
     height: 20px;
-    // background-color: #420039;
     background-color: #F6AE2D;
     margin-bottom: 15px;
     transition: all 500ms;
-    transform: rotate(45deg);
     box-shadow: $shadow1;
     border-radius: 100%;
     &.active {
-      // background-color: #932F6D;
       background-color: #FE4A49;
-      // transform: rotate(90deg);
-      // border: solid 6px #E07BE0;
-      // border: solid 6px #EDB458;
-      // border: solid 3px #BC3908;
     }
     @media screen and (max-width: 320px) {
       height: 20px;
