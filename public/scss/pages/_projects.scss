@@ -1,5 +1,5 @@
 .projects-container {
-  background-color: #272234;
+  background-color: $pink;
   color: white;
   // ** //
   min-height: $pageminheight;
@@ -31,12 +31,12 @@
   display: flex;
   flex-direction: column;
   // box-shadow: $shadow2;
-  box-shadow: $shadow3;
+  box-shadow: $shadow2;
   // height: 500px;
   max-width: 520px;
   // background-color: #F8F8F8;
   border-radius: 10px;
-  background-color: lighten(#272234, 5%);
+  background-color: #28293C;
   & > div:first-child {
   }
   & img {
